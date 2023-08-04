@@ -75,7 +75,7 @@ function App({ signOut }) {
     const data = {
       name: form.get("name"),
       description: form.get("description"),
-      image: image.name,
+      image: image,
     };
     if (!!data.image) await Storage.put(data.name, image);
     await API.graphql({
@@ -102,14 +102,13 @@ function App({ signOut }) {
     <View className="App">
       <Heading level={1}>My Notes App</Heading>
 
-      <View
-        name='image'
-        as="input"
-        type="file"
-        style={{ alignSelf: 'end' }}
-      />
-
       <View as="form" margin="3rem 0" onSubmit={createNote}>
+        <View
+          name='image'
+          as="input"
+          type="file"
+          style={{ alignSelf: 'end' }}
+        />
         <Flex direction="row" justifyContent="center">
           <TextField
             name="name"
