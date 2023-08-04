@@ -131,7 +131,7 @@ function App({ signOut }) {
               note.image && (
                 <Image
                   src={note.image}
-                  alt={`visual aid for ${note.name}`}
+                  alt={`visual aid for ${notes.name}`}
                   style={{ width: 400 }}
                 />
               )
