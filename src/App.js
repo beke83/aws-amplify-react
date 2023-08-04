@@ -128,7 +128,7 @@ function App({ signOut }) {
             </Text>
             <Text as="span">{note.description}</Text>
             {
-              notes.image && (
+              note.image && (
                 <Image
                   src={note.image}
                   alt={`visual aid for ${note.name}`}
